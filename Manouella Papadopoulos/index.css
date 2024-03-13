@@ -1,0 +1,307 @@
+body {
+  background-image: url(sunset.jpg);
+  background-size: cover;
+  background-color: #1f0001;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  margin: 0px;
+  font-family: Poppins, tahoma, sans-serif;
+  color: #ffff;
+}
+
+/* NAVBAR */
+header {
+  background-color: rgba(31, 0, 1, 0.6);
+  height: 40px;
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+li {
+  display: flex;
+  display: inline;
+  gap: 40px;
+  margin-right: 20px;
+}
+
+li > a {
+  text-decoration: none;
+  color: #ffff;
+}
+
+a:hover {
+  color: #ffff5c;
+}
+
+a:active {
+  color: #1f0001;
+}
+
+.top {
+  display: flex;
+  display: inline;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px 20px 0 0;
+}
+
+.active {
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.toplinks,
+img {
+  max-width: 95px;
+  margin-top: 10px;
+  z-index: 1;
+}
+
+#logo {
+  border-radius: 80px;
+  /* transition: 1s box-shadow; */
+  transition: transform 0.2s;
+}
+
+#logo:hover {
+  transform: scale(1.5);
+}
+/* NAVBAR STYLING SLUT */
+
+h1 {
+  font-family: Poppins, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  word-spacing: 15px;
+  margin: 20px 0;
+}
+
+/* En Div med bakgrundsbild som skiftar bilder (animation) med */
+#imageflow {
+  margin-top: 0;
+  width: 350px;
+  height: 350px;
+  border-radius: 100%;
+  background-image: url(sunset1.jpg);
+  background-size: 100% 100%;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; /* Tagit box-shadow från https://getcssscan.com/css-box-shadow-examples */
+  animation: changeImage 20s linear infinite;
+}
+
+@keyframes changeImage {
+  10% {
+    background-image: url(sunset1.jpg);
+  }
+  20% {
+    background-image: url(sunset3.jpg);
+  }
+  40% {
+    background-image: url(sunset4.jpg);
+  }
+  60% {
+    background-image: url(sunset5.jpeg);
+  }
+  80% {
+    background-image: url(sunset6.jpg);
+  }
+  100% {
+    background-image: url(sunset7.jpg);
+  }
+}
+
+figure {
+  margin-left: 0.5rem;
+}
+
+figcaption {
+  max-height: 40px;
+  margin-left: 10px;
+  background-color: rgba(31, 0, 1, 0.5);
+  padding: 10px;
+  margin-top: 20px;
+  width: 300px;
+  border-width: 4px;
+  border-radius: 15px;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+section {
+  text-align: center;
+  width: 260px;
+  height: 230px;
+  padding: 10px;
+  margin-left: 40px;
+  margin-top: 30px;
+  background-color: rgba(31, 0, 1, 0.5);
+  border-image: linear-gradient(#f6b73c, #4d9f0c) 30;
+  border-width: 4px;
+  border-radius: 15px;
+  /* border-style:inset; */
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+section > h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  margin: 30px 0;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  background: rgb(31, 0, 1);
+  background: linear-gradient(
+    0deg,
+    rgba(31, 0, 1, 0.4640056706276261) 95%,
+    rgba(253, 187, 45, 0) 100%
+  );
+}
+
+/* #Image flow, Cirkeln med olika bilder positioneras
+så den täcker solen i olika mobilskärmar */
+@media (min-width: 382px) {
+  #imageflow {
+    margin-left: 5px;
+  }
+}
+
+@media (min-width: 390px) {
+  #imageflow {
+    margin-left: 11px;
+  }
+}
+
+@media (min-width: 400px) {
+  #imageflow {
+    margin-left: 16px;
+  }
+}
+
+@media (min-width: 410px) {
+  #imageflow {
+    margin-left: 21px;
+  }
+}
+
+@media (min-width: 410px) {
+  #imageflow {
+    margin-left: 21px;
+  }
+}
+
+@media (min-width: 410px) {
+  #imageflow {
+    margin-left: 23px;
+  }
+
+  figcaption section {
+    margin-left: 40px;
+  }
+}
+
+/**** DESKTOP ANPASSAD POSITIONERING ****/
+@media (min-width: 980px) {
+  body {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    min-height: 100vh;
+    grid-template-areas:
+      "nav nav nav"
+      "main main main"
+      "footer footer footer";
+  }
+
+  header {
+    background: rgb(242, 143, 205);
+    background: linear-gradient(
+      90deg,
+      rgba(242, 143, 205, 0.0032213569021358746) 0%,
+      rgba(242, 143, 205, 0.10966393393294815) 44%,
+      rgba(31, 0, 1, 0.7007003484987745) 100%
+    ); /* linear gradient skapad med https://cssgradient.io/ */
+  }
+
+  main {
+    grid-area: main;
+    min-width: 100vh;
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+    grid-template-rows: 1fr 5fr;
+    grid-template-areas:
+      "welcome welcome"
+      "sunimg text";
+  }
+
+  /* NAVBAR POSITIONERING */
+  header {
+    grid-area: nav;
+    /* solen är i flexbehållare med navbaren */
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* fick göra navbaren till en flexbehållare, flex-end för att flytta till höger */
+  .navbar {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* för att få listan på en inline rad.
+Gap mellan länkarna, */
+  li {
+    display: flex;
+    display: inline;
+    gap: 40px;
+    margin-right: 20px;
+  }
+  /* NAVBAR-POSITIONERING SLUT */
+
+  #imageflow {
+    grid-area: sunimg;
+    margin-left: 30px;
+    margin-top: 5px; /* ''manuell'' centrering inuti grid rutan */
+  }
+
+  h1 {
+    grid-area: welcome;
+    margin: auto;
+    text-align: right;
+  }
+
+  section {
+    grid-area: text;
+    margin-top: 90px;
+    margin-left: 110px;
+  }
+
+  figcaption {
+    margin-left: 30px;
+  }
+
+  footer {
+    grid-area: footer;
+    padding-bottom: 10px;
+    height: 1.5rem;
+  }
+}

@@ -1,0 +1,230 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins, tahoma, sans-serif;
+  color: #ffffff;
+  background-color: #fdeaf6;
+  background-image: url(backgroundGallery.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* NAVBAR STYLING */
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  position: sticky;
+  top: 0;
+  background-color: rgba(31, 0, 1, 0.6);
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+li {
+  display: flex;
+  display: inline;
+  gap: 40px;
+  margin-right: 20px;
+}
+
+li > a {
+  text-decoration: none;
+  color: #fafdff;
+}
+
+a:hover {
+  color: #ffff5c;
+}
+
+a:active {
+  color: #1f0001;
+}
+
+.top {
+  display: flex;
+  display: inline;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px 20px 0 0;
+}
+
+.active {
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.toplinks,
+#logo {
+  max-width: 95px;
+  margin-top: 10px;
+  z-index: 1;
+}
+
+#logo {
+  transition: transform 0.2s;
+}
+
+#logo:hover {
+  transform: scale(1.5);
+}
+/* NAVBAR STYLING SLUT */
+
+h1 {
+  font-family: Poppins, Tahoma, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  word-spacing: 70px;
+  line-height: 200%;
+  margin-top: 7rem;
+  margin-left: 10px;
+  /* text-shadow: 2px 2px 4px rgba(24, 17, 17, 0.2); */
+  background-image: linear-gradient(to right, #a90ea4, #564115);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.firstline {
+  font-size: 2.5rem;
+  font-weight: 500;
+  /* color:#f593e9; */
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 15px;
+  text-align: center;
+  margin: 90px 0;
+  /* text-shadow: 2px 2px 4px rgba(24, 17, 17, 0.2); */
+  background-image: linear-gradient(to right, #a90ea4, #565003);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.article-box {
+  background-color: rgba(31, 0, 1, 0.6);
+  margin-top: 20px;
+  margin-bottom: 40px;
+  max-width: 95%;
+  border-width: 4px;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+/* Eftersom padding på hela .article-box gjorde
+att bilderna blev för små i mobilläge */
+p,
+aside {
+  padding: 15px 25px;
+}
+
+h3 {
+  margin-top: 45px;
+  padding: 5px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+#image-container {
+  display: flex;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 1rem;
+}
+
+.articleimage1 {
+  max-width: 50%;
+  /* Här har jag tagit Height delat på width för att få heights procent så bilderna laddas upp snabbare
+ */
+  height: 72.72%;
+}
+
+.Mars-image {
+  justify-content: center;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+figcaption {
+  text-align: center;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+iframe {
+  display: block;
+  margin: auto;
+  width: 95%;
+  height: auto;
+  border: 0px;
+  aspect-ratio: 16/9;
+}
+
+h4 {
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+footer {
+  text-align: center;
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 7px;
+  height: 2rem;
+  background: rgb(31, 0, 1);
+  background: linear-gradient(
+    0deg,
+    rgba(31, 0, 1, 0.4640056706276261) 76%,
+    rgba(253, 187, 45, 0) 100%
+  );
+}
+
+@media (min-width: 980px) {
+  header {
+    background: rgb(242, 143, 205);
+    background: linear-gradient(
+      90deg,
+      rgba(242, 143, 205, 0.0032213569021358746) 0%,
+      rgba(242, 143, 205, 0.6278712168461135) 44%,
+      rgba(31, 0, 1, 0.7007003484987745) 100%
+    );
+  }
+
+  h1 {
+    letter-spacing: 35px;
+  }
+
+  .article-box {
+    margin: auto;
+    max-width: 70%;
+  }
+
+  .Mars-image {
+    text-align: center;
+    max-width: 60%;
+  }
+}
